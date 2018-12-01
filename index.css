@@ -7,6 +7,7 @@ body {
     font-size: 16px;
     line-height: 1.5;
     margin: 0;
+    color: #4C0012;
 }
 
 header {
@@ -68,7 +69,7 @@ header {
 .contact-form {
     background: #B3002A;
     text-align: center;
-    padding: 10px 20px;
+    padding: 20px;
     color: white;
     text-shadow: 1px 2px 6px #777;
 }
@@ -84,22 +85,26 @@ header {
 .btn {
     background: #0080c8;
     color: white;
+    font-weight: bold;
     margin: 5px;
     padding: 15px 30px;
     text-transform: uppercase;
     border-radius: 5px;
     font-size: 14px;
     border: none;
+    box-shadow: 2px 4px 12px rgba(25,89,140,.45);
+    border: #0080c8 solid 1px;
 }
 
 .btn:hover {
     cursor: pointer;
+    background-color: white;
+    color: #0080c8;
+    border: #0080c8 solid 1px;
 }
 
 .eachStat {
     max-width: 500px;
-    /* margin-left: auto;
-    margin-right: auto; */
     padding: 10px;
     background-color: #0080c8;
     color: white;
@@ -126,39 +131,147 @@ header {
     margin-bottom: 0;
 }
 
+.whyUs {
+    max-width: 70%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .whyUs h1 {
     font-size: 32px;
     color: #B3002A;
+    margin-top: 80px;
+    padding-top: 60px;
+    text-shadow: 1px 2px 4px rgba(0,0,0,0.3);
+    border-top: 3px solid #ECE4E6;
+}
+
+.whyUs p {
+    font-size: 18px;
+}
+
+.whyus-stats {
+    padding-top: -15px;
+    padding-bottom: 60px;
+}
+
+.whyus-stats h3 {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.whyus-stats span {
+    font-size: 26px;
+}
+
+.whyus-stats p {
+    margin-top: -15px;
+    
+}
+
+.stat-num:not(:last-child) {
+    padding-bottom: 20px;
+    border-bottom: 2px solid #ECE4E6;
+}
+
+.button-sec {
+    margin: 50px 0;
+}
+
+.bio {
     max-width: 70%;
-    margin-top: 40px;
-    margin-left: auto;
-    margin-right: auto;
+}
+
+.video-responsive {         /* responsive video */
+    overflow:hidden;
+    padding-bottom:90.25%;
+    position:relative;
+    height:0;
+}
+.video-responsive iframe {
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;  
+}
+
+.button-sec {
+    text-align: center;
+    margin: 60px auto;
+}
+
+.bio {
+    margin: 0 auto;
     text-align: center;
 }
 
+.bio h1 {
+    font-size: 38px;
+    text-shadow: 1px 2px 4px rgba(0,0,0,0.3);
+    color: #B3002A;
+    letter-spacing: 2px;
+}
+
+.bio img {
+    border-radius: 50%;
+    width: 150px;
+    box-shadow: 3px 4px 10px rgba(0,0,0,0.3)
+}
+
+.bio h4 {
+    font-size: 18px;
+    padding: 0;
+    margin: 5px;
+}
+
+
+
 @media only screen and (min-width: 505px) {
+    .banner-content h2 {
+        font-size: 30px;
+    }
+    
+    .banner-content p {
+        font-size: 20px;
+    }
+
     .eachStat {
         max-width: 32.9%;
     }
+
     .eachStat:nth-child(2) {
         margin-left: 2px;
         margin-right: 2px;  
     }
+
 	.stats {
 		display: flex;
 		flex-wrap: wrap;
         justify-content: space-between;
     }
+
     .icons {
         width: 22%;
     }
+    
     .statDescr {
         width: 72%;
+    }
+
+    .video-responsive {        
+        padding-bottom:80.25%;
+    }
+}
+
+@media only screen and (min-width: 730px) { 
+    .video-responsive {        
+        padding-bottom:72.25%;
     }
 }
 
 @media only screen and (min-width: 815px) {
-
     .banner-content {
         padding-bottom: 50px;
     }
@@ -169,6 +282,38 @@ header {
     
     .banner-content p {
         font-size: 30px;
+    }
+
+    .whyUs h1 {
+        font-size: 40px;
+    }
+
+    .whyus-stats {
+        display: flex;
+        justify-content: center;
+        padding-top: 60px;
+        padding-bottom: 80px;
+    }
+
+    .eachStat:nth-child(2) {
+        margin-left: 2px;
+        margin-right: 2px;  
+    }
+
+    .stat-num:nth-child(2) {
+        padding: 0 20px;
+        margin: 0 20px;
+        border-left: 1px solid lightgray;
+        border-right: 1px solid lightgray;
+        max-width: 33.3%;
+    }
+
+    .stat-num:not(:last-child) {
+        border-bottom: none;
+    }
+
+    .video-responsive {        
+        padding-bottom:57.25%;
     }
 }
 
@@ -186,9 +331,18 @@ header {
     }
 }
 
+@media only screen and (min-width: 1040px) {
+    .video-responsive {        
+        padding-bottom:46.25%;
+    }
+}
+
 @media only screen and (min-width: 1260px) {
 	.stats {
         justify-content: center;
     }
 
+    .video-responsive {        
+        padding-bottom:36.25%;
+    }
 }
